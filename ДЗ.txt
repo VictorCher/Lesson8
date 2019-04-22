@@ -1,0 +1,46 @@
+// Задание 1
+
+using System;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static int Fact(int n)
+        {
+            int res = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                res = res * i;
+            }
+            return res;
+        }
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            if (n == 0) Console.WriteLine("Результат: 1");
+            else Console.WriteLine("Результат:" + Fact(n));
+            Console.ReadKey();
+        }
+    }
+}
+
+// Задание 2
+
+Строка: Console . WriteLine (( short ) obj ); выдаст ошибку
+Для корректного преобразования можно сделать так:
+int a = (int)obj; // Распакуем ссылочный тип данных в тот тип из которого
+он был упакован
+Console.WriteLine((short)a); // а затем преобразуем в тип short
+
+// Задание 3
+
+SELECT Name from "Table" WHERE Name LIKE 'A%' GROUP BY Name HAVING COUNT(Name) > 1;
+
+// Задание 4
+
+Ответ: 5
+
+// Задание 5
+
+Select group_id, descr from "Table1" group by group_id, descr;
